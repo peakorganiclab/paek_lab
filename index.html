@@ -51,39 +51,98 @@
             color: white;
         }
 
-        /* 푸터 스타일 */
-        .footer {
-            background: #f8f8f8;
-            padding: 20px;
-            margin-top: 50px;
-            text-align: center;
-            font-size: 14px;
-            color: #555;
+        /* 슬라이더 스타일 */
+        .slider-container {
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            margin: auto;
+            overflow: hidden;
         }
 
-        .footer-links {
-            margin-bottom: 10px;
+        .slides {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
         }
 
-        .footer-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #555;
-            font-weight: bold;
+        .slides.active {
+            display: block;
         }
 
-        .footer-links a:hover {
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* 연구 분야 섹션 스타일 */
+        .research-section {
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .research-section h2 {
             color: #E74C3C;
+            font-size: 32px;
+            border-bottom: 3px solid #E74C3C;
+            display: inline-block;
+            padding-bottom: 10px;
         }
 
-        .footer-info {
-            margin-top: 10px;
-            line-height: 1.5;
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
         }
 
-        .footer-logo img {
-            height: 40px;
-            margin-top: 10px;
+        .card {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: #E74C3C;
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+            }
         }
 
     </style>
@@ -101,25 +160,68 @@
         <a href="publications.html">논문 및 프로젝트</a>
     </div>
 
-    <!-- 기존 내용 -->
+    <!-- 이미지 슬라이더 -->
+    <div class="slider-container">
+        <img class="slides active" src="Slide1.jpg" alt="">
+        <img class="slides" src="Slide2.jpg" alt="">
+        <img class="slides" src="Slide3.jpg" alt="">
 
-    <!-- 푸터 -->
-    <div class="footer">
-        <div class="footer-links">
-            <a href="#">영상정보처리기기 운영관리방침</a>
-            <a href="#">이메일주소무단수집거부</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">취업규칙</a>
-            <a href="#">정보공개</a>
-            <a href="#">예결산공고</a>
-            <a href="#">대학정보공시</a>
+        <!-- 이전/다음 버튼 -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- 연구 분야 소개 -->
+    <div class="research-section">
+        <h2>연구 분야 소개</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="perovskite.jpg" alt="Perovskite Solar Cells">
+                <h3>Perovskite Solar Cells</h3>
+                <p>고효율 페로브스카이트 태양전지 개발 및 최적화</p>
+            </div>
+            <div class="card">
+                <img src="htm.jpg" alt="Hole Transport Materials">
+                <h3>Hole Transport Materials</h3>
+                <p>새로운 홀 전도성 물질의 합성 및 특성 연구</p>
+            </div>
+            <div class="card">
+                <img src="nanomaterials.jpg" alt="Nanomaterials">
+                <h3>Nanomaterials</h3>
+                <p>차세대 나노소재를 활용한 에너지 변환 연구</p>
+            </div>
+            <div class="card">
+                <img src="electrode.jpg" alt="Electrode Engineering">
+                <h3>Electrode Engineering</h3>
+                <p>전극 구조 최적화를 통한 전자 이동 개선</p>
+            </div>
         </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".slides");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        }
+
+        function moveSlide(step) {
+            currentIndex += step;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            showSlide(currentIndex);
+        }
+
+        setInterval(() => moveSlide(1), 4000); // 4초마다 자동 변경
         
+    </script>
+    
         <div class="footer-info">
-            <strong>서울 캠퍼스:</strong> 02-2287-5114<br>
-            서울특별시 종로구 홍지문 2길 20, 상명대학교 (03016)<br>
-            <strong>천안 캠퍼스:</strong> 041-550-5114<br>
-            충청남도 천안시 동남구 상명대길 31, 상명대학교 (31066)<br>
+            <strong>서울 캠퍼스:</strong><br>
+            서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)<br>
         </div>
 
         <div class="footer-logo">
