@@ -145,6 +145,28 @@
             }
         }
 
+        /* 푸터 스타일 */
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* 로고와 글 사이 간격 */
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-logo img {
+            display: block;
+            max-width: 100px; /* 로고 크기 조정 */
+            height: auto;
+        }
+
+        .footer-text {
+            text-align: left; /* 글 왼쪽 정렬 */
+            line-height: 1.6; /* 줄 간격 */
+        }
+
     </style>
 </head>
 <body>
@@ -215,19 +237,18 @@
             showSlide(currentIndex);
         }
 
-        setInterval(() => moveSlide(1), 4000); // 4초마다 자동 변경
-        
+        setInterval(() => moveSlide(1), 4000);
     </script>
-    
-        <div class="footer-info">
-            서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)<br>
-        </div>
 
+    <!-- 푸터 -->
+    <div class="footer-container">
         <div class="footer-logo">
-            <img src="sangmyung_logo.svg" alt="상명대학교 로고">
+            <img src="images/상명대학교로고.svg" alt="상명대학교 로고">
         </div>
-
-        <p>COPYRIGHT BY SANGMYUNG UNIVERSITY. ALL RIGHTS RESERVED.</p>
+        <div class="footer-text">
+            <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
+            <p>COPYRIGHT BY SANGMYUNG UNIVERSITY. ALL RIGHTS RESERVED.</p>
+        </div>
     </div>
 
 </body>
