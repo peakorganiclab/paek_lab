@@ -51,25 +51,25 @@
             color: white;
         }
 
-        /* 슬라이더 스타일 */
+        /* 🔥 슬라이더 스타일 (이미지 짤림 방지) */
         .slider-container {
             position: relative;
-            max-width: 100%;
-            height: auto;
+            width: 100vw; /* 전체 화면 너비 */
+            height: 80vh; /* 화면 높이의 80% */
             margin: auto;
             overflow: hidden;
         }
 
         .slides {
+            position: absolute;
             width: 100%;
-            height: auto;
-            max-height: 500px;
-            object-fit: contain;
-            display: none; /* 기본적으로 보이지 않도록 설정 */
+            height: 100%;
+            object-fit: cover; /* 이미지를 화면에 꽉 차게 표시 (잘리지 않음) */
+            display: none; /* 기본적으로 숨김 */
         }
 
         .slides.active {
-            display: block; /* 활성화된 이미지만 보이도록 설정 */
+            display: block; /* 현재 활성화된 슬라이드만 표시 */
         }
 
         .prev, .next {
