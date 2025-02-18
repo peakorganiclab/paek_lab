@@ -7,132 +7,178 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            text-align: center;
             background: url('./background.jpg') no-repeat center center fixed;
             background-size: cover;
+            color: #333;
         }
+
         .header {
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .header h1 {
             font-size: 48px;
             font-weight: bold;
             margin: 0;
+            color: #E74C3C;
         }
-        .header .underline {
-            width: 100px;
-            height: 5px;
-            background: #E74C3C;
-            margin: 10px auto;
-        }
-        .container {
+
+        .nav {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            padding: 20px;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: #E74C3C;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
         .professor {
             display: flex;
             align-items: center;
-            margin-top: 30px;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .professor img {
             width: 150px;
             height: 150px;
             border-radius: 10px;
             margin-right: 20px;
         }
-        .professor-info {
-            text-align: left;
-        }
-        .professor-info h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .professor-info p {
-            margin: 5px 0;
-        }
-        .nav {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            padding: 10px 15px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .nav a:hover {
-            background: #E74C3C;
-            color: white;
-        }
-        @media (max-width: 768px) {
-            .nav {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+
         .section {
-            max-width: 800px;
-            margin: 50px auto;
+            margin-top: 50px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
+
+        .section h2 {
+            color: #E74C3C;
+            border-bottom: 2px solid #E74C3C;
+            padding-bottom: 5px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 280px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .professor {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Paek LABORATORY</h1>
-        <div class="underline"></div>
+        <h1>paek LABORATORY</h1>
     </div>
+
+    <div class="nav">
+        <a href="lab.html">연구실 소개</a>
+        <a href="professor.html">교수님 소개</a>
+        <a href="#research">연구 분야</a>
+        <a href="#team">연구진 소개</a>
+        <a href="#publications">논문 및 프로젝트</a>
+    </div>
+
     <div class="container">
         <div class="professor">
             <img src="./prf.b.jpg" alt="Professor Sanghyun Peak">
-            <div class="professor-info">
+            <div>
                 <h2><strong>Sanghyun Peak, Professor</strong></h2>
                 <p>Department of Chemistry & Energy Engineering, Sangmyung University</p>
                 <p>We are working on Perovskite solar cells.</p>
             </div>
         </div>
-        <div class="nav">
-            <a href="lab.html">연구실 소개</a>
-            <a href="professor.html">교수님 소개</a>
-            <a href="#research">연구 분야</a>
-            <a href="#team">연구진 소개</a>
-            <a href="#publications">논문 및 프로젝트</a>
+
+        <!-- 연구 분야 -->
+        <div class="section" id="research">
+            <h2>연구 분야</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="solar.jpg" alt="Perovskite Solar Cells">
+                    <h3>Perovskite Solar Cells</h3>
+                    <p>차세대 태양전지 기술 연구</p>
+                </div>
+                <div class="card">
+                    <img src="nano.jpg" alt="Nanomaterials">
+                    <h3>Nanomaterials</h3>
+                    <p>나노소재 기반 전극 개발</p>
+                </div>
+                <div class="card">
+                    <img src="electrode.jpg" alt="Electrode Engineering">
+                    <h3>Electrode Engineering</h3>
+                    <p>전극 구조 최적화 연구</p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- 연구 분야 -->
-    <div class="section" id="research">
-        <h2>연구 분야</h2>
-        <p>우리 연구실은 Perovskite Solar Cells, Nanomaterials, Electrode Engineering 등을 연구하고 있습니다.</p>
-    </div>
+        <!-- 연구진 소개 -->
+        <div class="section" id="team">
+            <h2>연구진 소개</h2>
+            <p>현재 연구진 목록 및 역할에 대한 정보를 여기에 추가하세요.</p>
+        </div>
 
-    <!-- 연구진 소개 -->
-    <div class="section" id="team">
-        <h2>연구진 소개</h2>
-        <p>현재 연구진 목록 및 역할에 대한 정보를 여기에 추가하세요.</p>
-    </div>
-
-    <!-- 논문 및 프로젝트 -->
-    <div class="section" id="publications">
-        <h2>논문 및 프로젝트</h2>
-        <p>최근 연구 논문 및 주요 프로젝트 정보</p>
+        <!-- 논문 및 프로젝트 -->
+        <div class="section" id="publications">
+            <h2>논문 및 프로젝트</h2>
+            <p>최근 연구 논문 및 주요 프로젝트 정보</p>
+        </div>
     </div>
 </body>
 </html>
