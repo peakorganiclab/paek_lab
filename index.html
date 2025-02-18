@@ -65,6 +65,11 @@
             height: auto;
             max-height: 500px;
             object-fit: contain;
+            display: none; /* 기본적으로 보이지 않도록 설정 */
+        }
+
+        .slides.active {
+            display: block; /* 활성화된 이미지만 보이도록 설정 */
         }
 
         .prev, .next {
