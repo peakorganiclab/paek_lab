@@ -51,20 +51,25 @@
             color: white;
         }
 
-        /* 🔥 슬라이더 전체 너비 확장 */
+        /* 슬라이더 스타일 */
         .slider-container {
             position: relative;
-            width: 100vw; /* 화면 전체 너비 사용 */
+            max-width: 100%;
             height: auto;
-            margin: 0 auto;
+            margin: auto;
             overflow: hidden;
         }
 
         .slides {
             width: 100%;
             height: auto;
-            max-height: 600px;
-            object-fit: cover; /* 이미지가 컨테이너를 채우도록 설정 */
+            max-height: 500px;
+            object-fit: contain;
+            display: none; /* 기본적으로 보이지 않도록 설정 */
+        }
+
+        .slides.active {
+            display: block; /* 활성화된 이미지만 보이도록 설정 */
         }
 
         .prev, .next {
