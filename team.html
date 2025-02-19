@@ -80,6 +80,27 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* 로고와 글 사이 간격 */
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-logo img {
+            display: block;
+            max-width: 100px; /* 로고 크기 조정 */
+            height: auto;
+        }
+
+        .footer-text {
+            text-align: left; /* 글 왼쪽 정렬 */
+            line-height: 1.6; /* 줄 간격 */
+        }
+
     </style>
 </head>
 <body>
@@ -105,6 +126,14 @@
             <li>최민호 석사 - 전기화학적 소자 연구</li>
             <li>박지수 학부 연구생 - 소재 분석 및 실험 보조</li>
         </ul>
+    </div>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="sangmyung_logo.svg" alt="상명대학교 로고">
+        </div>
+        <div class="footer-text">
+            <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
+        </div>
     </div>
 </body>
 </html>
