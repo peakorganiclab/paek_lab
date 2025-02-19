@@ -86,6 +86,26 @@
             color: #333;
             text-decoration: none;
         }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px; /* 로고와 글 사이 간격 */
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-logo img {
+            display: block;
+            max-width: 100px; /* 로고 크기 조정 */
+            height: auto;
+        }
+
+        .footer-text {
+            text-align: left; /* 글 왼쪽 정렬 */
+            line-height: 1.6; /* 줄 간격 */
+        }
     </style>
 </head>
 <body>
@@ -120,6 +140,14 @@
             <li><a href="https://pubs.rsc.org/en/content/articlehtml/2016/ta/c6ta07320a" target="_blank" class="paper-title">A highly hindered bithiophene-functionalized dispiro-oxepine derivative as an efficient hole transporting material for perovskite solar cells</a><br>Journal of Materials Chemistry A, 2016년 10월</li>
             <li><a href="https://pubs.rsc.org/en/content/articlehtml/2016/sc/c5sc04819a" target="_blank" class="paper-title">Donor-π-Donor Type Hole Transporting Material: Marked π-Bridge Effects on Optoelectronic Properties, Solid-State Structure, and Perovskite Solar Cell Efficiency</a><br>Chemical Science, 2016년 5월</li>
         </ul>
+    </div>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="sangmyung_logo.svg" alt="상명대학교 로고">
+        </div>
+        <div class="footer-text">
+            <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
+        </div>
     </div>
 </body>
 </html>
