@@ -61,13 +61,42 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+         .nav {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background: #E74C3C;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>교수님 소개</h1>
     </div>
-
+    <div class="nav">
+        <a href="index.html">홈</a>
+        <a href="lab.html">연구실 소개</a>
+        <a href="research.html">연구 분야</a>
+        <a href="team.html">연구진 소개</a>
+        <a href="publications.html">논문 및 프로젝트</a>
+    </div>
     <div class="container">
         <div class="professor">
             <img src="./prf.b.jpg" alt="Professor Sanghyun Paek">
