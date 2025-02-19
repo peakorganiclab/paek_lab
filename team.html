@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연구진 소개 - PAEK LABORATORY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: rgba(245, 245, 245, 1);
+            color: #333;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #E74C3C;
+        }
+
+        .nav {
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover, .nav a.active {
+            background: #E74C3C;
+            color: white;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .content h2 {
+            color: #E74C3C;
+            font-size: 28px;
+            border-bottom: 2px solid #E74C3C;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .team-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .team-list li {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>연구진 소개</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="index.html">홈</a>
+        <a href="lab.html">연구실 소개</a>
+        <a href="professor.html">교수님 소개</a>
+        <a href="research.html">연구 분야</a>
+        <a href="team.html" class="active">연구진 소개</a>
+        <a href="publications.html">논문 및 프로젝트</a>
+    </div>
+
+    <div class="content">
+        <h2>연구진 명단</h2>
+        <ul class="team-list">
+            <li>박상현 교수 - 연구실 총괄</li>
+            <li>김철수 박사 - 유기 전자소재 연구</li>
+            <li>이영희 석사 - 페로브스카이트 태양전지 개발</li>
+            <li>최민호 석사 - 전기화학적 소자 연구</li>
+            <li>박지수 학부 연구생 - 소재 분석 및 실험 보조</li>
+        </ul>
+    </div>
+</body>
+</html>
