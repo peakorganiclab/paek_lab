@@ -49,16 +49,20 @@
         .nav a:hover, .nav a.active {
             color: #007BFF;
         }
+
+        /* 🔥 슬라이드 크기 줄이기 */
         .slider-container {
             position: relative;
             width: 100vw;
-            hight: 80vh;
+            height: 60vh; /* 기존 80vh → 60vh로 줄임 */
             margin: auto;
             overflow: hidden;
         }
 
         .slides {
             width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 잘리지 않게 */
             display: none;
         }
 
@@ -68,6 +72,7 @@
             margin-bottom: 20px;
         }
 
+        /* 🔥 슬라이드 버튼 크기 조정 */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -75,12 +80,14 @@
             background-color: rgba(0,0,0,0.5);
             color: white;
             border: none;
-            padding: 10px;
+            padding: 15px; /* 기존 10px → 15px로 확대 */
+            font-size: 18px; /* 버튼 아이콘 크기 확대 */
             cursor: pointer;
+            border-radius: 5px;
         }
 
-        .prev { left: 10px; }
-        .next { right: 10px; }
+        .prev { left: 20px; } /* 버튼을 조금 더 바깥쪽으로 이동 */
+        .next { right: 20px; }
 
         .hero-section {
             text-align: center;
@@ -171,7 +178,8 @@
         <a href="team.html">연구진 소개</a>
         <a href="publications.html">논문 및 프로젝트</a>
     </div>
-     <div class="container">
+    
+    <div class="container">
         <div class="slider-container">
             <img class="slides active" src="Slide1.jpg" alt="">
             <img class="slides" src="Slide2.jpg" alt="">
@@ -204,22 +212,6 @@
     <div class="hero-section">
         <h2>에너지 변환 및 저장 기술 연구</h2>
         <p>우리 연구실은 지속 가능한 에너지 기술 개발을 목표로 페로브스카이트 태양전지, 전극 엔지니어링 및 신소재 연구를 수행하고 있습니다.</p>
-    </div>
-
-    <div class="research-section">
-        <h2>연구 분야 소개</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="perovskite.jpg" alt="Perovskite Solar Cells">
-                <h3>Perovskite Solar Cells</h3>
-                <p>고효율 페로브스카이트 태양전지 개발 및 최적화</p>
-            </div>
-            <div class="card">
-                <img src="htm.jpg" alt="Hole Transport Materials">
-                <h3>Hole Transport Materials</h3>
-                <p>새로운 홀 전도성 물질의 합성 및 특성 연구</p>
-            </div>
-        </div>
     </div>
 
     <div class="footer-container">
