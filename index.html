@@ -49,6 +49,36 @@
         .nav a:hover, .nav a.active {
             color: #007BFF;
         }
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            width: 100%;
+            display: none;
+        }
+
+        .slides.active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
 
         .hero-section {
             text-align: center;
@@ -139,6 +169,35 @@
         <a href="team.html">연구진 소개</a>
         <a href="publications.html">논문 및 프로젝트</a>
     </div>
+     <div class="container">
+        <div class="slider-container">
+            <img class="slides active" src="Slide1.jpg" alt="">
+            <img class="slides" src="Slide2.jpg" alt="">
+            <img class="slides" src="Slide3.jpg" alt="">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".slides");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        }
+
+        function moveSlide(step) {
+            currentIndex += step;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            showSlide(currentIndex);
+        }
+
+        setInterval(() => moveSlide(1), 4000);
+    </script>
 
     <div class="hero-section">
         <h2>에너지 변환 및 저장 기술 연구</h2>
