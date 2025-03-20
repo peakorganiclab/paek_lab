@@ -27,7 +27,12 @@
             font-size: 40px;
             font-weight: 700;
             color: #212529;
-            white-space: pre-line;
+            line-height: 1.2; /* 줄 간격 조정 */
+            margin: 10px 0; /* 위아래 여백 조정 */
+        }
+
+        .header .title-line {
+            display: block; /* 강제 줄바꿈 적용 */
         }
 
         .nav {
@@ -87,19 +92,22 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-         .footer-container {
+
+        .footer-container {
             background: #F1F3F5;
             padding: 20px;
             text-align: center;
             font-size: 14px;
             color: #6C757D;
-         }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>ENERGY ORGANIC 
-            MATERIALS LABORATORY</h1>
+        <h1>
+            <span class="title-line">ENERGY ORGANIC</span>
+            <span class="title-line">MATERIALS LABORATORY</span>
+        </h1>
     </div>
     
     <div class="nav">
@@ -144,9 +152,9 @@
         <div class="section">
             <h3>Intellectual Property</h3>
             <ul>
-                <p><li>HOLE TRANSPORTING ORGANIC MOLECULES CONTAINING ENAMINE GROUPS FOR OPTOELECTRONIC AND PHOTOELECTROCHEMICAL DEVICES, Vytautas GETAUTIS, Maryte DASKEVICIENE, Tadas MALINAUSKAS, Mohammad Khaja NAZEERUDDIN, Sanghyun PAEK, Kasparas RAKSTYS , 20180322</li></p>
-                <p><li>DISPIRO-OXEPINE/THIAPINE DERIVATIVES FOR OPTOELECTRONIC SEMICONDUCTORS, Kasparas RAKSTYS, Sanghyun PAEK, Muhammad SOHAIL, Klaus H. DAMEN, Mohammad Khaja NAZEERUDDIN , 20180111</li></p>
-                <p><li>HOLE TRANSPORTING AND LIGHT ABSORBING MATERIAL FOR SOLID STATE SOLAR CELLS, Peng QIN, Mohammad Kaja NAZEERUDDIN, Michael GRAETZEL, Jaejung KO, Sanghyun PAEK, Nara CHO, 20150723</li></p>
+                <li>HOLE TRANSPORTING ORGANIC MOLECULES CONTAINING ENAMINE GROUPS FOR OPTOELECTRONIC AND PHOTOELECTROCHEMICAL DEVICES, Vytautas GETAUTIS, Maryte DASKEVICIENE, Tadas MALINAUSKAS, Mohammad Khaja NAZEERUDDIN, Sanghyun PAEK, Kasparas RAKSTYS , 20180322</li>
+                <li>DISPIRO-OXEPINE/THIAPINE DERIVATIVES FOR OPTOELECTRONIC SEMICONDUCTORS, Kasparas RAKSTYS, Sanghyun PAEK, Muhammad SOHAIL, Klaus H. DAMEN, Mohammad Khaja NAZEERUDDIN , 20180111</li>
+                <li>HOLE TRANSPORTING AND LIGHT ABSORBING MATERIAL FOR SOLID STATE SOLAR CELLS, Peng QIN, Mohammad Kaja NAZEERUDDIN, Michael GRAETZEL, Jaejung KO, Sanghyun PAEK, Nara CHO, 20150723</li>
             </ul>
         </div>
     </div>
