@@ -32,25 +32,64 @@
         .nav {
             display: flex;
             justify-content: center;
+            align-items: center;
             background: #FFFFFF;
             border-bottom: 1px solid #E0E0E0;
             padding: 15px 0;
             gap: 20px;
+            position: relative;
         }
 
-        .nav a {
+        .nav a, .dropdown {
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px; /* 기존 16px → 18px로 확대 */
             color: #495057;
-            padding: 10px 20px;
+            padding: 12px 24px; /* 기존 10px 20px → 12px 24px로 확대 */
             transition: 0.3s;
             font-weight: 600;
+            position: relative;
+            display: flex;
+            align-items: center;
         }
 
         .nav a:hover, .nav a.active {
             color: #007BFF;
         }
 
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 140px; /* 기존 120px → 140px로 확대 */
+            z-index: 1;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .dropdown-content a {
+            color: #495057;
+            padding: 12px; /* 기존 10px → 12px로 확대 */
+            text-decoration: none;
+            display: block;
+            font-size: 16px; /* 기존 14px → 16px로 확대 */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #F8F9FA;
+            color: #007BFF;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         .container {
             max-width: 1000px;
             margin: 60px auto;
@@ -122,7 +161,13 @@
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="professor.html">Professor</a>
-        <a href="team.html">Members</a>
+        <div class="dropdown">
+            <a href="team.html">Members ▾</a>
+            <div class="dropdown-content">
+                <a href="team.html">Researcher</a>
+                <a href="alumni.html">alumni</a>
+            </div>
+        </div>
         <a href="publications.html" class="active">Publications</a>
     </div>
 
