@@ -42,9 +42,9 @@
 
         .nav a{
             text-decoration: none;
-            font-size: 22px; /* 기존 16px → 18px로 확대 */
+            font-size: 22px;
             color: #495057;
-            padding: 12px 25px; /* 기존 10px 20px → 12px 24px로 확대 */
+            padding: 12px 25px;
             transition: 0.3s;
             font-weight: 600;
             position: relative;
@@ -60,7 +60,7 @@
             position: relative;
             display: flex;
             align-items: center;
-          }
+        }
 
         .dropdown-content {
             display: none;
@@ -70,7 +70,7 @@
             top: 100%;
             background-color: white;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 140px; /* 기존 120px → 140px로 확대 */
+            min-width: 140px;
             z-index: 1;
             border-radius: 5px;
             text-align: center;
@@ -78,10 +78,10 @@
 
         .dropdown-content a {
             color: #495057;
-            padding: 12px; /* 기존 10px → 12px로 확대 */
+            padding: 12px;
             text-decoration: none;
             display: block;
-            font-size: 18px; /* 기존 14px → 16px로 확대 */
+            font-size: 18px;
         }
 
         .dropdown-content a:hover {
@@ -93,11 +93,10 @@
             display: block;
         }
 
-        /* 🔥 슬라이드 크기 줄이기 */
         .slider-container {
             position: relative;
             width: 100vw;
-            height: 60vh; /* 기존 80vh → 60vh로 줄임 */
+            height: 60vh;
             margin: auto;
             overflow: hidden;
         }
@@ -105,17 +104,15 @@
         .slides {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 이미지가 잘리지 않게 */
+            object-fit: cover;
             display: none;
         }
 
         .slides.active {
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto;
         }
 
-        /* 🔥 슬라이드 버튼 크기 조정 */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -123,13 +120,13 @@
             background-color: rgba(0,0,0,0.5);
             color: white;
             border: none;
-            padding: 15px; /* 기존 10px → 15px로 확대 */
-            font-size: 18px; /* 버튼 아이콘 크기 확대 */
+            padding: 15px;
+            font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
         }
 
-        .prev { left: 20px; } /* 버튼을 조금 더 바깥쪽으로 이동 */
+        .prev { left: 20px; }
         .next { right: 20px; }
 
         .hero-section {
@@ -139,7 +136,7 @@
         }
 
         .hero-section h2 {
-            font-family: 'Inter', sans-serif; /* Noto Serif → Inter */
+            font-family: 'Inter', sans-serif;
             font-size: 32px;
             font-weight: 700;
             color: #212529;
@@ -206,6 +203,7 @@
             font-size: 14px;
             color: #6C757D;
         }
+      
     </style>
 </head>
 <body>
@@ -222,7 +220,7 @@
             <a href="team.html" style="padding: 12px 30px;">Members ▾</a>
             <div class="dropdown-content">
                 <a href="team.html">Researcher</a>
-                <a href="alumni.html">alumni</a>
+                <a href="alumni.html">Alumni</a>
             </div>
         </div>
         <a href="publications.html">Publications</a>
@@ -233,8 +231,8 @@
             <img class="slides active" src="./index/Slide1.jpg" alt="">
             <img class="slides" src="./index/Slide2.jpg" alt="">
             <img class="slides" src="./index/Slide3.jpg" alt="">
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <button class="prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
         </div>
     </div>
 
