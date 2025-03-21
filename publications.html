@@ -151,6 +151,56 @@
             color: #6C757D;
             border-top: 1px solid #DEE2E6;
         }
+
+        @media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        font-size: 14px;
+    }
+
+    .slider-container {
+        height: 40vh; /* 모바일에서는 좀 더 작게 */
+    }
+
+    .hero-section h2 {
+        font-size: 24px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .research-section h2 {
+        font-size: 22px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
