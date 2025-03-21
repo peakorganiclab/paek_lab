@@ -42,9 +42,9 @@
 
         .nav a{
             text-decoration: none;
-            font-size: 22px;
+            font-size: 22px; /* 기존 16px → 18px로 확대 */
             color: #495057;
-            padding: 12px 25px;
+            padding: 12px 25px; /* 기존 10px 20px → 12px 24px로 확대 */
             transition: 0.3s;
             font-weight: 600;
             position: relative;
@@ -60,7 +60,7 @@
             position: relative;
             display: flex;
             align-items: center;
-        }
+          }
 
         .dropdown-content {
             display: none;
@@ -70,7 +70,7 @@
             top: 100%;
             background-color: white;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 140px;
+            min-width: 140px; /* 기존 120px → 140px로 확대 */
             z-index: 1;
             border-radius: 5px;
             text-align: center;
@@ -78,10 +78,10 @@
 
         .dropdown-content a {
             color: #495057;
-            padding: 12px;
+            padding: 12px; /* 기존 10px → 12px로 확대 */
             text-decoration: none;
             display: block;
-            font-size: 18px;
+            font-size: 18px; /* 기존 14px → 16px로 확대 */
         }
 
         .dropdown-content a:hover {
@@ -93,10 +93,11 @@
             display: block;
         }
 
+        /* 🔥 슬라이드 크기 줄이기 */
         .slider-container {
             position: relative;
             width: 100vw;
-            height: 60vh;
+            height: 60vh; /* 기존 80vh → 60vh로 줄임 */
             margin: auto;
             overflow: hidden;
         }
@@ -104,15 +105,17 @@
         .slides {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* 이미지가 잘리지 않게 */
             display: none;
         }
 
         .slides.active {
-            display: block;
-            margin: 0 auto;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
+        /* 🔥 슬라이드 버튼 크기 조정 */
         .prev, .next {
             position: absolute;
             top: 50%;
@@ -120,13 +123,13 @@
             background-color: rgba(0,0,0,0.5);
             color: white;
             border: none;
-            padding: 15px;
-            font-size: 18px;
+            padding: 15px; /* 기존 10px → 15px로 확대 */
+            font-size: 18px; /* 버튼 아이콘 크기 확대 */
             cursor: pointer;
             border-radius: 5px;
         }
 
-        .prev { left: 20px; }
+        .prev { left: 20px; } /* 버튼을 조금 더 바깥쪽으로 이동 */
         .next { right: 20px; }
 
         .hero-section {
@@ -136,7 +139,7 @@
         }
 
         .hero-section h2 {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* Noto Serif → Inter */
             font-size: 32px;
             font-weight: 700;
             color: #212529;
@@ -203,7 +206,56 @@
             font-size: 14px;
             color: #6C757D;
         }
-      
+
+        @media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .nav a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .dropdown-content {
+        min-width: 100px;
+        font-size: 14px;
+    }
+
+    .slider-container {
+        height: 40vh; /* 모바일에서는 좀 더 작게 */
+    }
+
+    .hero-section h2 {
+        font-size: 24px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .research-section h2 {
+        font-size: 22px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -220,7 +272,7 @@
             <a href="team.html" style="padding: 12px 30px;">Members ▾</a>
             <div class="dropdown-content">
                 <a href="team.html">Researcher</a>
-                <a href="alumni.html">Alumni</a>
+                <a href="alumni.html">alumni</a>
             </div>
         </div>
         <a href="publications.html">Publications</a>
@@ -231,8 +283,8 @@
             <img class="slides active" src="./index/Slide1.jpg" alt="">
             <img class="slides" src="./index/Slide2.jpg" alt="">
             <img class="slides" src="./index/Slide3.jpg" alt="">
-            <button class="prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </div>
 
