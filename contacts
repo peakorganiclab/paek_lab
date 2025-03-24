@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | PAEK LAB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F8F9FA;
+      color: #495057;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      text-align: left;
+      padding: 20px;
+      background: rgba(240, 240, 240, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .contact-flex {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .map-container, .contact-info {
+      flex: 1 1 400px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 18px;
+      color: #495057;
+    }
+
+    .contact-info img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>CONTACTS</h2>
+      <div class="contact-flex">
+        <!-- 카카오 지도 스크립트 방식 -->
+        <div class="map-container">
+          <div id="daumRoughmapContainer1742792375826" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%; height:360px;"></div>
+        </div>
+
+        <!-- 연락처 + 이미지 -->
+        <div class="contact-info">
+          <p>유기합성 및 소자제작에 관심이 있는 학생을 모집합니다.</p>
+          <p>학부연구생 및 석사, 박사과정 대학원생 모집</p>
+          <p>E-Mail : sanghyun.paek@smu.ac.kr</p>
+          <img src="organic_image.jpg" alt="유기방 추억사진">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 카카오 지도 스크립트 삽입 -->
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      "timestamp" : "1742792375826",
+      "key" : "2nfo9",
+      "mapWidth" : "100%",
+      "mapHeight" : "360"
+    }).render();
+  </script>
+</body>
+</html>
