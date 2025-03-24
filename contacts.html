@@ -14,85 +14,84 @@
       color: #495057;
     }
 
+    .header {
+      background: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #E0E0E0;
+    }
 
-        .header {
-            background: #FFFFFF;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #E0E0E0;
-        }
+    .header h1 {
+      font-family: 'Noto Serif', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: #212529;
+      white-space: pre-line;
+    }
 
-        .header h1 {
-            font-family: 'Noto Serif', serif;
-            font-size: 40px;
-            font-weight: 700;
-            color: #212529;
-            white-space: pre-line;
-        }
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E0E0E0;
+      padding: 15px 0;
+      gap: 20px;
+      position: relative;
+    }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #FFFFFF;
-            border-bottom: 1px solid #E0E0E0;
-            padding: 15px 0;
-            gap: 20px;
-            position: relative;
-        }
+    .nav a {
+      text-decoration: none;
+      font-size: 22px;
+      color: #495057;
+      padding: 12px 25px;
+      transition: 0.3s;
+      font-weight: 600;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
-        .nav a{
-            text-decoration: none;
-            font-size: 22px; /* 기존 16px → 18px로 확대 */
-            color: #495057;
-            padding: 12px 25px; /* 기존 10px 20px → 12px 24px로 확대 */
-            transition: 0.3s;
-            font-weight: 600;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
+    .nav a:hover, .nav a.active {
+      color: #007BFF;
+    }
 
-        .nav a:hover, .nav a.active {
-            color: #007BFF;
-        }
+    .dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-          }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 140px;
+      z-index: 1;
+      border-radius: 5px;
+      text-align: center;
+    }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 100%;
-            background-color: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 140px; /* 기존 120px → 140px로 확대 */
-            z-index: 1;
-            border-radius: 5px;
-            text-align: center;
-        }
+    .dropdown-content a {
+      color: #495057;
+      padding: 12px;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+    }
 
-        .dropdown-content a {
-            color: #495057;
-            padding: 12px; /* 기존 10px → 12px로 확대 */
-            text-decoration: none;
-            display: block;
-            font-size: 18px; /* 기존 14px → 16px로 확대 */
-        }
+    .dropdown-content a:hover {
+      background-color: #F8F9FA;
+      color: #007BFF;
+    }
 
-        .dropdown-content a:hover {
-            background-color: #F8F9FA;
-            color: #007BFF;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
     .container {
       max-width: 900px;
@@ -123,6 +122,7 @@
       justify-content: space-between;
       gap: 30px;
       flex-wrap: wrap;
+      align-items: flex-start;
     }
 
     .map-container, .contact-info {
@@ -132,22 +132,28 @@
     .contact-info {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       font-size: 18px;
       color: #495057;
+      height: 360px;
     }
 
     .contact-info img {
       width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 2;
+      max-height: 266px;
+      object-fit: contain;
       border-radius: 10px;
       margin-top: 15px;
     }
+
     .footer-container {
-            background: #F1F3F5;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-            color: #6C757D;
+      background: #F1F3F5;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #6C757D;
     }
 
     @media (max-width: 768px) {
@@ -155,17 +161,18 @@
         flex-wrap: wrap;
         gap: 10px;
         font-size: 16px;
-    }
+      }
 
-    .nav a {
+      .nav a {
         font-size: 16px;
         padding: 8px 15px;
-    }
+      }
 
-    .dropdown-content {
+      .dropdown-content {
         min-width: 100px;
         font-size: 14px;
-    }
+      }
+
       .contact-flex {
         flex-direction: column;
         align-items: center;
@@ -173,50 +180,48 @@
 
       .contact-info {
         text-align: center;
+        height: auto;
       }
     }
   </style>
 </head>
 <body>
   <div class="header">
-        <h1>ENERGY ORGANIC 
-            MATERIALS LABORATORY</h1>
-    </div>
+    <h1>ENERGY ORGANIC 
+      MATERIALS LABORATORY</h1>
+  </div>
   <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="professor.html">Professor</a>
-        <div class="dropdown">
-            <a href="team.html" style="padding: 12px 30px;">Members ▾</a>
-            <div class="dropdown-content">
-                <a href="team.html">Researcher</a>
-                <a href="alumni.html">Alumni</a>
-            </div>
-        </div>
-        <a href="publications.html">Publications</a>
-        <a href="contacts.html" class="active">Contacts</a>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="professor.html">Professor</a>
+    <div class="dropdown">
+      <a href="team.html" style="padding: 12px 30px;">Members ▾</a>
+      <div class="dropdown-content">
+        <a href="team.html">Researcher</a>
+        <a href="alumni.html">Alumni</a>
+      </div>
     </div>
+    <a href="publications.html">Publications</a>
+    <a href="contacts.html" class="active">Contacts</a>
+  </div>
   <div class="container">
     <div class="section">
-      <h2>Contacts</h2>
+      <h2>CONTACTS</h2>
       <div class="contact-flex">
-        <!-- 카카오 지도 스크립트 방식 -->
         <div class="map-container">
           <div id="daumRoughmapContainer1742792375826" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%; height:360px;"></div>
         </div>
-
-        <!-- 연락처 + 이미지 -->
         <div class="contact-info">
-          <p>유기합성 및 소자제작에<br>관심이 있는 학생을 모집합니다.</p>
-          <p>학부연구생 및 석사, 박사과정 대학원생 모집</p>
-          <p>E-Mail : sanghyun.paek@smu.ac.kr</p>
-          <img src="./image/organic_image.jpg" alt="유기방 추억사진" style="width: auto; height: auto; max-height: 266px; border-radius: 10px; margin-top: 15px; object-fit: contain;">
+          <div>
+            <p>유기합성 및 소자제작에<br>관심이 있는 학생을 모집합니다.</p>
+            <p>학부연구생 및 석사, 박사과정 대학원생 모집</p>
+            <p>E-Mail : sanghyun.paek@smu.ac.kr</p>
+          </div>
+          <img src="./image/organic_image.jpg" alt="유기방 추억사진">
         </div>
       </div>
     </div>
   </div>
-
-  <!-- 카카오 지도 스크립트 삽입 -->
   <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
   <script charset="UTF-8">
     new daum.roughmap.Lander({
@@ -227,8 +232,8 @@
     }).render();
   </script>
   <div class="footer-container">
-        <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
-        <p>&copy; 2024 ENERGY ORGANIC MATERIALS LABORATORY</p>
-    </div>
+    <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
+    <p>&copy; 2024 ENERGY ORGANIC MATERIALS LABORATORY</p>
+  </div>
 </body>
 </html>
