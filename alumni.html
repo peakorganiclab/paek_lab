@@ -7,240 +7,180 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Serif:wght@600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
       body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F8F9FA;
-            color: #495057;
-        }
-
-        .header {
-            background: #FFFFFF;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #E0E0E0;
-        }
-
-        .header h1 {
-            font-family: 'Noto Serif', serif;
-            font-size: 40px;
-            font-weight: 700;
-            color: #212529;
-            white-space: pre-line;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #FFFFFF;
-            border-bottom: 1px solid #E0E0E0;
-            padding: 15px 0;
-            gap: 20px;
-            position: relative;
-        }
-
-        .nav a{
-            text-decoration: none;
-            font-size: 22px; /* 기존 16px → 18px로 확대 */
-            color: #495057;
-            padding: 12px 25px; /* 기존 10px 20px → 12px 24px로 확대 */
-            transition: 0.3s;
-            font-weight: 600;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav a:hover, .nav a.active {
-            color: #007BFF;
-        }
-
-        .dropdown {
-            position: relative;
-            display: flex;
-            align-items: center;
-          }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 100%;
-            background-color: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            min-width: 140px; /* 기존 120px → 140px로 확대 */
-            z-index: 1;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .dropdown-content a {
-            color: #495057;
-            padding: 12px; /* 기존 10px → 12px로 확대 */
-            text-decoration: none;
-            display: block;
-            font-size: 18px; /* 기존 14px → 16px로 확대 */
-        }
-
-        .dropdown-content a:hover {
-            background-color: #F8F9FA;
-            color: #007BFF;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 50px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
- 
-        .section h2 {
-            font-family: 'Noto Serif', serif;
-            font-size: 28px;
-            font-weight: 600;
-            border-bottom: 3px solid #212529;
-            padding-bottom: 5px;
-            color: #212529;
-        }
-
-        .team-card {
-            display: flex;
-            align-items: center;
-            background: #FFFFFF;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s ease-in-out;
-        }
-
-        .team-card:hover {
-            background: #F8F9FA;
-            transform: translateY(-3px);
-        }
-
-        .team-card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .team-info {
-            font-size: 18px;
-        }
-
-        .team-name {
-            font-weight: 700;
-            color: #212529;
-        }
-
-        .team-position {
-            font-size: 16px;
-            color: #6C757D;
-        }
-
-        .footer-container {
-            background: #F1F3F5;
-            padding: 40px;
-            text-align: center;
-            font-size: 14px;
-            color: #6C757D;
-            border-top: 1px solid #DEE2E6;
-        }
-
-        @media (max-width: 768px) {
-    .nav {
-        flex-wrap: wrap;
-        gap: 10px;
-        font-size: 16px;
-    }
-
-    .nav a {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
-
-    .dropdown-content {
-        min-width: 100px;
-        font-size: 14px;
-    }
-
-    .slider-container {
-        height: 40vh; /* 모바일에서는 좀 더 작게 */
-    }
-
-    .hero-section h2 {
-        font-size: 24px;
-    }
-
-    .hero-section p {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    .research-section h2 {
-        font-size: 22px;
-    }
-
-    .card-container {
-        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #F8F9FA;
+        color: #495057;
+      }
+      .header {
+        background: #FFFFFF;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #E0E0E0;
+      }
+      .header h1 {
+        font-family: 'Noto Serif', serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: #212529;
+        white-space: pre-line;
+      }
+      .nav {
+        display: flex;
+        justify-content: center;
         align-items: center;
-    }
+        background: #FFFFFF;
+        border-bottom: 1px solid #E0E0E0;
+        padding: 15px 0;
+        gap: 20px;
+        position: relative;
+      }
+      .nav a{
+        text-decoration: none;
+        font-size: 22px;
+        color: #495057;
+        padding: 12px 25px;
+        transition: 0.3s;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .nav a:hover, .nav a.active { color: #007BFF; }
+      .dropdown { position: relative; display: flex; align-items: center; }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        min-width: 140px;
+        z-index: 1;
+        border-radius: 5px;
+        text-align: center;
+      }
+      .dropdown-content a {
+        color: #495057;
+        padding: 12px;
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+      }
+      .dropdown-content a:hover { background-color: #F8F9FA; color: #007BFF; }
+      .dropdown:hover .dropdown-content { display: block; }
 
-    .card {
-        width: 90%;
-    }
+      .container {
+        max-width: 1100px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .section h2 {
+        font-family: 'Noto Serif', serif;
+        font-size: 28px;
+        font-weight: 600;
+        border-bottom: 3px solid #212529;
+        padding-bottom: 5px;
+        color: #212529;
+      }
 
-    .prev, .next {
-        padding: 10px;
+      /* --- 카드 공통 --- */
+      .team-card {
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+        transition: all 0.2s ease-in-out;
+      }
+      .team-card:hover { background: #F8F9FA; transform: translateY(-3px); }
+      .team-card img {
+        width: 80px; height: 80px; border-radius: 50%; margin-right: 20px; object-fit: cover;
+      }
+      .team-info { font-size: 18px; }
+      .team-name { font-weight: 700; color: #212529; }
+      .team-position { font-size: 16px; color: #6C757D; }
+
+      /* --- 섹션 구분 (학위/졸업연도 등) --- */
+      .subsection-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #212529;
+        margin: 32px 0 12px;
+        border-left: 4px solid #212529;
+        padding-left: 10px;
+      }
+
+      .footer-container {
+        background: #F1F3F5;
+        padding: 40px;
+        text-align: center;
         font-size: 14px;
-    }
-}
+        color: #6C757D;
+        border-top: 1px solid #DEE2E6;
+      }
 
+      @media (max-width: 768px) {
+        .nav { flex-wrap: wrap; gap: 10px; font-size: 16px; }
+        .nav a { font-size: 16px; padding: 8px 15px; }
+        .dropdown-content { min-width: 100px; font-size: 14px; }
+      }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>ENERGY ORGANIC 
-            MATERIALS LABORATORY</h1>
-    </div>
+  <div class="header">
+    <h1>ENERGY ORGANIC 
+      MATERIALS LABORATORY</h1>
+  </div>
 
-     <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="professor.html">Professor</a>
-        <div class="dropdown">
-            <a href="team.html" style="padding: 12px 30px;" class="active">Members ▾</a>
-            <div class="dropdown-content">
-                <a href="team.html">Researcher</a>
-                <a href="alumni.html" class="active">Alumni</a>
-            </div>
+  <div class="nav">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="professor.html">Professor</a>
+    <div class="dropdown">
+      <a href="team.html" style="padding: 12px 30px;" class="active">Members ▾</a>
+      <div class="dropdown-content">
+        <a href="team.html">Researcher</a>
+        <a href="alumni.html" class="active">Alumni</a>
+      </div>
+    </div>
+    <a href="publications.html">Publications</a>
+    <a href="contacts.html">Contacts</a>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h2>Alumni</h2>
+
+      <!-- 학위 기준 하위 섹션 (필요 시 연도별로도 세분화 가능) -->
+      <div class="subsection">
+        <h3 class="subsection-title">Master’s Alumni</h3>
+
+        <!-- 한정환 (졸업자) -->
+        <div class="team-card">
+          <img src="image/JH Han.jpg" alt="한정환" />
+          <div class="team-info">
+            <p class="team-name">Jeonghwan Han</p>
+            <p class="team-position">M.S. (2023–2025)</p>
+            <p class="team-position">Email (while at lab): 202332013@sangmyung.kr</p>
+            <!-- 필요하면 현재 소속/진로 추가: <p class="team-position">Current: Company/Institution, Role</p> -->
+          </div>
         </div>
-        <a href="publications.html">Publications</a>
-        <a href="contacts.html">Contacts</a>
-    </div>
 
-    <div class="container">
-        <div class="section">
-            <h2>Alumni</h2>
-            <div class="team-card">
-                <div class="team-info">
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="footer-container">
-        <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
-        <p>&copy; 2024 PAEK LABORATORY</p>
-    </div>
+  <div class="footer-container">
+    <p>서울특별시 종로구 홍지문 2길 20, 상명대학교 자하관 N413호 (03016)</p>
+    <p>&copy; 2024 PAEK LABORATORY</p>
+  </div>
 </body>
 </html>
